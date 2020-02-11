@@ -1,0 +1,119 @@
+@import './setup';
+
+// Default style stripper
+body,
+h1,
+h2,
+p,
+ul,
+div,
+section,
+img,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+.numberHolder{
+    height:5rem;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 122px 500px;
+    width:60%;
+    padding:1rem;
+}
+
+.gridItem1{
+    background:blueviolet;
+
+}
+
+.gridItem2{
+    background:green;
+}
+
+.gridItem3{
+    background:red;
+}
+
+.gridItem4{
+    background:blue;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction:row;
+}
+
+.section2{
+    display:flex;
+    flex-direction: column;
+}
+
+h1{
+    background: orange;
+    font-size: 4rem;
+    text-align:center;
+}
+
+button{
+    padding:1rem;
+    background: orange;
+    width: 80%;
+    margin:1rem auto;
+    border: 0.2rem solid black;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.numberHolder{
+background:tomato;
+display:flex;
+justify-content: center;
+}
+
+.nextNum{
+    font-size:3rem;
+    display:flex;
+    align-self:center;
+    justify-content: center;
+    border: 1px blue solid;
+    padding:0 1rem;
+    font-weight:bold;
+}
+
+.num1, .num2, .num3, .num4{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.gridItem{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:75%
+}
+
+.next{
+    margin-top:12rem;
+    background:tomato;
+}
+
+.instructions{
+    text-align: left;
+    padding:2rem
+}
+
+li{
+    list-style-type: number;
+    line-height: 1.2rem;
+}
+
+.copyright{
+    text-align:center;
+    background:orange;
+}
