@@ -41,7 +41,7 @@ footer {
 }
 
 .gridItem4{
-    background:blue;
+    background:yellow;
 }
 
 .wrapper{
@@ -71,7 +71,7 @@ button{
 }
 
 .numberHolder{
-background:tomato;
+background:blue;
 display:flex;
 justify-content: center;
 }
@@ -81,7 +81,7 @@ justify-content: center;
     display:flex;
     align-self:center;
     justify-content: center;
-    border: 1px blue solid;
+    border: 1px orange solid;
     padding:0 1rem;
     font-weight:bold;
 }
@@ -100,7 +100,7 @@ justify-content: center;
 
 .next{
     margin-top:12rem;
-    background:tomato;
+    background:blue;
 }
 
 .instructions{
@@ -116,4 +116,9 @@ li{
 .copyright{
     text-align:center;
     background:orange;
+}
+
+.selected{
+    background:black;
+    color: white;
 }

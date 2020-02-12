@@ -305,7 +305,7 @@ footer {
 }
 
 .gridItem4 {
-  background: blue;
+  background: yellow;
 }
 
 .wrapper {
@@ -345,7 +345,7 @@ button {
 }
 
 .numberHolder {
-  background: tomato;
+  background: blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,7 +364,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px blue solid;
+  border: 1px orange solid;
   padding: 0 1rem;
   font-weight: bold;
 }
@@ -389,7 +389,7 @@ button {
 
 .next {
   margin-top: 12rem;
-  background: tomato;
+  background: blue;
 }
 
 .instructions {
@@ -405,4 +405,9 @@ li {
 .copyright {
   text-align: center;
   background: orange;
+}
+
+.selected {
+  background: black;
+  color: white;
 }
