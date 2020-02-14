@@ -6,57 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./assets/favicon_io/favicon-32x32.png" type="image/x-icon">
     <title>Juno Bingo</title>
 </head>
 <body>
+    <!-- Header begins here.-->
     <header>
         <h1>Juno <span>Bingo</span></h1>
         <div class="numberHolder">
             <p class="nextNum"></p>
         </div>
     </header>
+    <!-- the main begins here. -->
     <main>
         <section class="wrapper">
-            <section class="cardContainer">
-                <div class="gridItem gridItem1">
-                    <p class="numb num1"> </p>
-                </div>
-                <div class="gridItem gridItem2">
-                    <p class="numb num2"></p>
-                </div>
-                <div class="gridItem gridItem3">
-                    <p class="numb num3"> </p>
-                </div>
-                <div class="gridItem gridItem4">
-                    <p class="numb num4"></p>
-                </div>
-                <div class="gridItem gridItem5">
-                    <p class="numb num5"> </p>
-                </div>
-                <div class="gridItem gridItem6">
-                    <p class="numb num6"></p>
-                </div>
-                <div class="gridItem gridItem7">
-                    <p class="numb num7"> </p>
-                </div>
-                <div class="gridItem gridItem8">
-                    <p class="numb num8"></p>
-                </div>
-                <section class="message"> </section>
-            </section>
-            <section class="section2">
+            <section>
                 <div class="instructions">
                     <h2>Instructions</h2>
                     <ul> 
-                        <li>Objective of the game is to match all 8 numbers to get Bingo.</li>
-                        <li>A random number will appear and you will mark off your card by clicking, if your number matches.</li>
-                        <li>Click next number to draw the next number.</li>
-                        <li>Once you have all 8 numbers, then click Bingo! If you click Bingo without matching all numbers you will lose.</li>
+                        <li>Objective of the game is to match all 10 numbers before your opponent.</li>
+                        <li>A random number will appear when you click next number. </li>
+                        <li>You will then mark off your card by clicking, if your number is called.</li>
+                        <li>Once you have all 10 numbers, then click Bingo! If you click Bingo without matching all numbers you will lose.</li>
                         <li>Remember you can only click Bingo once!</li>
                     </ul>
                 </div>
-                <button class="next">Next Number!</button>
-                <button class="bingo">BINGO!</button>
+            </section>
+            <section>
+                <section class="clicker">
+                    <button class="next">Next Number!</button>
+                    <div class="message"> </div>
+                </section>
+                <section class="cardsArea">
+                    <section class=" cardContainer card1">
+                        <div class="gridItem gridItem1">
+                            <p class="numb num1"> </p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num2"></p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num3"> </p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num4"></p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num5"> </p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num6"></p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num7"> </p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num8"></p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num19"> </p>
+                        </div>
+                        <div class="gridItem gridItem1">
+                            <p class="numb num20"> </p>
+                        </div>
+                        <button class="bingo">Player 1 BINGO!</button>
+                    </section>
+                    <section class="cardContainer card2">
+                        <div class="gridItem gridItem2 ">
+                            <p class="numb num9"> </p>
+                        </div>
+                        <div class="gridItem gridItem2 ">
+                            <p class="numb num10"></p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num11"> </p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num12"></p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num13"> </p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num14"></p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num15"> </p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num16"></p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num17"> </p>
+                        </div>
+                        <div class="gridItem gridItem2">
+                            <p class="numb num18"> </p>
+                        </div>
+                        <button class="bingo2">Player 2 BINGO!</button>
+                    </section>
+                </section> 
+                
             </section>
         </section>
     </main>
