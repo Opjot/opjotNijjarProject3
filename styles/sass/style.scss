@@ -1,4 +1,5 @@
 @import './setup';
+@import './mediaQuery';
 
 // Default style stripper
 body,
@@ -15,6 +16,10 @@ footer {
     padding: 0;
 }
 
+body{
+    color:#ebebeb
+}
+
 .numberHolder{
     height:5rem;
 }
@@ -22,56 +27,45 @@ footer {
 .cardContainer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 122px 500px;
+    grid-template-rows: 122px 122px;
     width:60%;
-    padding:1rem;
-}
-
-.gridItem1{
-    background:blueviolet;
-
-}
-
-.gridItem2{
-    background:green;
-}
-
-.gridItem3{
-    background:red;
-}
-
-.gridItem4{
-    background:yellow;
+    padding:2rem 2rem 0 2rem;
+    flex-basis:auto;
+    grid-gap: 0;
 }
 
 .wrapper{
     display: flex;
     flex-direction:row;
+
 }
 
 .section2{
     display:flex;
     flex-direction: column;
+    padding:2rem 2rem 0 2rem;
+    flex-basis:auto;
 }
 
 h1{
-    background: orange;
+    background:#94ae3f;
     font-size: 4rem;
     text-align:center;
 }
 
 button{
     padding:1rem;
-    background: orange;
-    width: 80%;
+    background: #94ae3f;
+    width: 100%;
     margin:1rem auto;
-    border: 0.2rem solid black;
+    border: 0.2rem solid #101321;
     font-size:2rem;
     font-weight:bold;
+    color:#ebebeb
 }
 
 .numberHolder{
-background:blue;
+background:#243754;
 display:flex;
 justify-content: center;
 }
@@ -81,12 +75,12 @@ justify-content: center;
     display:flex;
     align-self:center;
     justify-content: center;
-    border: 1px orange solid;
+    border: 1px #94ae3f solid;
     padding:0 1rem;
     font-weight:bold;
 }
 
-.num1, .num2, .num3, .num4{
+.numb{
     font-size:2rem;
     font-weight:bold;
 }
@@ -95,17 +89,21 @@ justify-content: center;
     display:flex;
     align-items: center;
     justify-content: center;
-    height:75%
+    height:75%;
+    background: #243754;
+    border:0.1rem #ebebeb solid;
+    
 }
 
 .next{
     margin-top:12rem;
-    background:blue;
+    background:#243754;
 }
 
 .instructions{
     text-align: left;
-    padding:2rem
+    padding:0 2rem;
+    color:#101321
 }
 
 li{
@@ -115,10 +113,60 @@ li{
 
 .copyright{
     text-align:center;
-    background:orange;
+    margin-top:4rem;
+    color:#101321
 }
 
 .selected{
-    background:black;
-    color: white;
+    background: #94ae3f;
+    color:#243754;
 }
+.message{
+    background:#94ae3f;
+    width:400%;
+    height:100%;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+    color: #243754
+}
+
+@media (max-width:750px){
+    .wrapper{
+        flex-direction:column-reverse;
+    }
+    .section2{
+        flex-direction: column;
+        padding-top:1rem;
+    }
+    .next{
+        margin-top:1rem;
+    }
+    .cardContainer {
+        width:100%;
+        padding-top:2rem;
+    }
+    .copyright{
+
+        margin-top:2rem
+    }
+    .instructions{
+        padding-top:1rem
+    }
+    .hello, .bye{
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media(max-width:560px){
+    .wrapper{
+        flex-direction:column;
+    }
+    .section2{
+        flex-direction: column-reverse;
+        padding-top:0
+    }
+}
+

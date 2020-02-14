@@ -9,9 +9,8 @@ $(document).ready(function(){
     const numberArray = []
 
     // generating random number for card and checking array that it does not already exist there.
-    while(numberArray.length < 4){
-        const randomNumber = number(0, 10);
-        console.log(randomNumber)
+    while(numberArray.length < 9){  //
+        const randomNumber = number(0, 25);  //
         const cardNumber = numberArray.indexOf(randomNumber);
         if (cardNumber === - 1){
             numberArray.push(randomNumber)
@@ -23,52 +22,56 @@ $(document).ready(function(){
     $(".num2").append(numberArray[1])
     $(".num3").append(numberArray[2])
     $(".num4").append(numberArray[3])
+    $(".num5").append(numberArray[4]) 
+    $(".num6").append(numberArray[5])
+    $(".num7").append(numberArray[6]) 
+    $(".num8").append(numberArray[7]) 
 
     // grabbing the random numbers generated and putting them into an array.
     const generatedNumbersCalled = [];
-
     const numbersGenerated = [];
-    for(let i = 0; i <= 10; i++){
+    for(let i = 0; i <= 25; i++){  
         numbersGenerated.push(i);
     }
 
+    // This generates numbers to be displayed in the card. by randomly pulling out a number from the array and then pushing it into the next array if it doesn't already exist. Once a number has been picked it is spliced(removed) from that array so it cannot be picked again.
     $(".next").on("click", function(){
-        let numberDrawn = number(0, numbersGenerated.length - 1)
+        let numberDrawn = number(0, numbersGenerated.length - 1);
         $(".nextNum").text(numbersGenerated[numberDrawn]);
         const removedItem = numbersGenerated.splice(numberDrawn,1);
-        // console.log(numbersGenerated);
-        generatedNumbersCalled.push(removedItem)
-        console.log(generatedNumbersCalled)
-        // numbersGenerated.push(numberDrawn)
-        if (generatedNumbersCalled.length >= 12 ){
-            alert("All numbers have been called!")
+        generatedNumbersCalled.push(removedItem);
+        if (generatedNumbersCalled.length >= 27 ){  
+            alert("All numbers have been called!");
         }
     })
 
-    $(".bingo").on("click", function (){ 
-       function checkArrays(array1, array2){
+    //Comparing the 2 arrays by flattening (getting the multi-dimensional array to become singular aka getting past the objects inside the other array) the second one. 
+    $(".bingo").one("click", function (){ 
+        function checkArrays(array1, array2){
         array2 = array2.flat();
         return array1.every(function(item){
-                console.log(item)
                 return array2.includes(item);
             })
         }
 
-            if(checkArrays(numberArray, generatedNumbersCalled) === true){
-                alert("You have won the game!")
-            }
-            else (
-                alert("All of your numebrs dont match!")
-            )
-            console.log(checkArrays(numberArray, generatedNumbersCalled));
-            }) 
-    
+        // Appending text to tell user if they won or lost depending on the above function being true. 
+    if(checkArrays(numberArray, generatedNumbersCalled) === true){
+        $(".message").append("<p class='hello'>Winner Winner Vegan Dinner!</p> <p>You win the game!</p>");
+        $(".message").css({"display": "flex","flex-direction": "column", "font-size": "3rem","text-align": "center" });
+        $(".next").attr("disabled", "disabled");
+        } 
+        else {
+        $(".message").append("<p class='bye'>All your numbers did not match!</p> <p>Better luck next time!</p>");
+        $(".message").css({"display": "flex","flex-direction": "column", "font-size": "3rem","text-align": "center" });
+        $(".next").attr("disabled", "disabled");
+        }
+    }) 
+
     // changed the css styling on click.
     $(".gridItem").on("click", function(){
-        $(this).toggleClass("selected")
+        $(this).toggleClass("selected");
     })
-
-
+    
 });
 
 
